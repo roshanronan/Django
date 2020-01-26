@@ -44,7 +44,7 @@ def search(request):
     if 'state' in request.GET:
         state = request.GET['state']
         if state:
-            query_list=query_list.filter(state__iexact=state)
+            query_list=query_list.filter(state__iexact=state)# iexact for state without worring about case.
 
     #bedrooms
     if 'bedrooms' in request.GET:
